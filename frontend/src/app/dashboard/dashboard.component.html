@@ -1,0 +1,32 @@
+<div class="dashboard-box">
+    <!-- <mat-card class=" mat-elevation-z5 dashboard-card">
+      <mat-card-header >{{'monthly_waybills' | t }} </mat-card-header>
+      <app-basechart type="bar" section="monthly_waybills" ></app-basechart>
+    </mat-card>
+  
+    <mat-card class="mat-elevation-z5 dashboard-card">
+      <mat-card-header >{{ 'monthly_practices' | t }} </mat-card-header>
+      <app-basechart type="doughnut" section="monthly_practices" ></app-basechart>
+    </mat-card> -->
+  
+    <!-- <mat-card class="mat-elevation-z5 dashboard-card">
+      <mat-card-header >{{ 'documents_by_service' | t }} </mat-card-header>
+      <app-basechart type="pie" section="documents_by_service " ></app-basechart>
+    </mat-card> -->
+  
+    <mat-card class="mat-elevation-z5 dashboard-card">
+      <mat-card-header >{{ 'monthly_practices' | t }} </mat-card-header>
+      <div style="display: block">
+        <canvas baseChart
+                [datasets]="barChartData"
+                [labels]="barChartLabels"
+                [options]="barChartOptions"
+                [legend]="barChartLegend"
+                [chartType]="barChartType">
+        </canvas>
+      </div>
+    </mat-card>
+  
+  </div>
+  
+  

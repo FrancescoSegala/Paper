@@ -1,0 +1,18 @@
+
+
+<div class="xs-padding" *ngIf="list">
+  <h2 > {{ 'list_of_practices_for_list'  | t}} {{' '+ list.id}} - {{'waybill' | t}} {{ list.waybill_id }} - Dealer {{list.description}}</h2>
+<mat-card *ngIf="is_authorized('receiver', 'admin')" style="margin-bottom: 1.5em;">
+  <app-add-input  style="width: 100%;" title="add_practice"  [placeholder]="'practice_id'" [create]="create.bind(this)"></app-add-input>
+</mat-card>
+
+<mat-card>
+  <app-search
+    [config]="config"
+    [params]="params"
+    [load]="load.bind(this)"
+    [navigate]="navigate.bind(this)"
+    export_name="list">
+  </app-search>
+</mat-card>
+</div>

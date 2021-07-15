@@ -1,0 +1,11 @@
+<mat-card>
+    <app-search
+        [config]="config"
+        [params]="params"
+        [load]="load.bind(this)"
+        [add_item]="openBottomSheet.bind(this)"
+        [show_add]="is_authorized('receiver', 'admin')"
+        [navigate]="navigate.bind(this)"
+        export_name="lists">
+    </app-search>
+</mat-card>

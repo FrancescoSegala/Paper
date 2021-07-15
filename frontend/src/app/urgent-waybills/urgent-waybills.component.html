@@ -1,0 +1,23 @@
+<!-- <mat-card>
+  <app-search
+    [config]="config"
+    [params]="params"
+    [load]="load.bind(this)"
+    [add_item]="openBottomSheet.bind(this)"
+    [show_add]="is_authorized('sender', 'admin')"
+    [export]="exportName">
+  </app-search>
+</mat-card>
+
+ -->
+
+ <mat-card>
+ <app-search
+    [config]="config"
+    [params]="params"
+    [load]="load.bind(this)"
+    [add_item]="openBottomSheet.bind(this)"
+    [show_add]="is_authorized('sender', 'admin')"
+    export_name="urgent-waybills">
+</app-search>
+</mat-card>

@@ -1,0 +1,6334 @@
+{
+	"info": {
+		"_postman_id": "ecf7143a-ab25-4b2c-b175-fa8fa5ab80eb",
+		"name": "Paper",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "dealers",
+					"item": [
+						{
+							"name": "Dealers no parameters",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test('Dealers no parameters', function (){\r",
+											"    pm.response.to.have.status(200);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/dealers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"dealers"
+									],
+									"query": [
+										{
+											"key": "offset",
+											"value": "0",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"disabled": true
+										},
+										{
+											"key": "sort",
+											"value": "id",
+											"disabled": true
+										},
+										{
+											"key": "direction",
+											"value": "asc",
+											"disabled": true
+										},
+										{
+											"key": "vatcode",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "id_like",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "idpec_not_null",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "idpec_null",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "fake",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "status",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "id",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/dealers?all=[object Object]&empty=true&offset=0&limit=10&sort=id&direction=asc",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"dealers"
+											],
+											"query": [
+												{
+													"key": "all",
+													"value": "[object Object]"
+												},
+												{
+													"key": "empty",
+													"value": "true"
+												},
+												{
+													"key": "offset",
+													"value": "0"
+												},
+												{
+													"key": "limit",
+													"value": "10"
+												},
+												{
+													"key": "sort",
+													"value": "id"
+												},
+												{
+													"key": "direction",
+													"value": "asc"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Parameters present - ID",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test('Dealers - parameters present', function (){\r",
+											"    pm.response.to.have.status(200);\r",
+											"})\r",
+											"\r",
+											"\r",
+											"pm.test(\"id equal to 1\", function () {\r",
+											"    var jsonData = pm.response.json(); \r",
+											"    pm.expect(jsonData[0].id).to.eql(\"1\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/dealers?id=1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"dealers"
+									],
+									"query": [
+										{
+											"key": "offset",
+											"value": "0",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"disabled": true
+										},
+										{
+											"key": "sort",
+											"value": "id",
+											"disabled": true
+										},
+										{
+											"key": "direction",
+											"value": "asc",
+											"disabled": true
+										},
+										{
+											"key": "vatcode",
+											"value": "10983490011",
+											"disabled": true
+										},
+										{
+											"key": "id_like",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "idpec_not_null",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "idpec_null",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "fake",
+											"value": "N",
+											"disabled": true
+										},
+										{
+											"key": "status",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/dealers?all=[object Object]&empty=true&offset=0&limit=10&sort=id&direction=asc",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"dealers"
+											],
+											"query": [
+												{
+													"key": "all",
+													"value": "[object Object]"
+												},
+												{
+													"key": "empty",
+													"value": "true"
+												},
+												{
+													"key": "offset",
+													"value": "0"
+												},
+												{
+													"key": "limit",
+													"value": "10"
+												},
+												{
+													"key": "sort",
+													"value": "id"
+												},
+												{
+													"key": "direction",
+													"value": "asc"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Parameters not present - ID",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test('Dealers - parameters not present', function (){\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Body is empty\", function () {\r",
+											"    pm.response.to.have.body(\"[]\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/dealers?id=0036601asd",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"dealers"
+									],
+									"query": [
+										{
+											"key": "offset",
+											"value": "0",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"disabled": true
+										},
+										{
+											"key": "sort",
+											"value": "id",
+											"disabled": true
+										},
+										{
+											"key": "direction",
+											"value": "asc",
+											"disabled": true
+										},
+										{
+											"key": "vatcode",
+											"value": "10983490011asd",
+											"disabled": true
+										},
+										{
+											"key": "id_like",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "idpec_not_null",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "idpec_null",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "fake",
+											"value": "No",
+											"disabled": true
+										},
+										{
+											"key": "status",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "id",
+											"value": "0036601asd"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/dealers?all=[object Object]&empty=true&offset=0&limit=10&sort=id&direction=asc",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"dealers"
+											],
+											"query": [
+												{
+													"key": "all",
+													"value": "[object Object]"
+												},
+												{
+													"key": "empty",
+													"value": "true"
+												},
+												{
+													"key": "offset",
+													"value": "0"
+												},
+												{
+													"key": "limit",
+													"value": "10"
+												},
+												{
+													"key": "sort",
+													"value": "id"
+												},
+												{
+													"key": "direction",
+													"value": "asc"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Offset negative",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test('Dealers - Offset negative', function (){\r",
+											"    pm.response.to.have.status(500);\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/dealers?offset=-1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"dealers"
+									],
+									"query": [
+										{
+											"key": "offset",
+											"value": "-1"
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"disabled": true
+										},
+										{
+											"key": "sort",
+											"value": "id",
+											"disabled": true
+										},
+										{
+											"key": "direction",
+											"value": "asc",
+											"disabled": true
+										},
+										{
+											"key": "vatcode",
+											"value": "10983490011",
+											"disabled": true
+										},
+										{
+											"key": "id_like",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "idpec_not_null",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "idpec_null",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "fake",
+											"value": "N",
+											"disabled": true
+										},
+										{
+											"key": "status",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "id",
+											"value": "0036601",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/dealers?all=[object Object]&empty=true&offset=0&limit=10&sort=id&direction=asc",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"dealers"
+											],
+											"query": [
+												{
+													"key": "all",
+													"value": "[object Object]"
+												},
+												{
+													"key": "empty",
+													"value": "true"
+												},
+												{
+													"key": "offset",
+													"value": "0"
+												},
+												{
+													"key": "limit",
+													"value": "10"
+												},
+												{
+													"key": "sort",
+													"value": "id"
+												},
+												{
+													"key": "direction",
+													"value": "asc"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Limit negative",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test('Dealers - Limit negative', function (){\r",
+											"    pm.response.to.have.status(500);\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/dealers?limit=-10",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"dealers"
+									],
+									"query": [
+										{
+											"key": "offset",
+											"value": "-1",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "-10"
+										},
+										{
+											"key": "sort",
+											"value": "id",
+											"disabled": true
+										},
+										{
+											"key": "direction",
+											"value": "asc",
+											"disabled": true
+										},
+										{
+											"key": "vatcode",
+											"value": "10983490011",
+											"disabled": true
+										},
+										{
+											"key": "id_like",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "idpec_not_null",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "idpec_null",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "fake",
+											"value": "N",
+											"disabled": true
+										},
+										{
+											"key": "status",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "id",
+											"value": "0036601",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/dealers?all=[object Object]&empty=true&offset=0&limit=10&sort=id&direction=asc",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"dealers"
+											],
+											"query": [
+												{
+													"key": "all",
+													"value": "[object Object]"
+												},
+												{
+													"key": "empty",
+													"value": "true"
+												},
+												{
+													"key": "offset",
+													"value": "0"
+												},
+												{
+													"key": "limit",
+													"value": "10"
+												},
+												{
+													"key": "sort",
+													"value": "id"
+												},
+												{
+													"key": "direction",
+													"value": "asc"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Dealer_id null",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test('Dealers - dealer_id null', function (){\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Body is empty\", function () {\r",
+											"    pm.response.to.have.body(\"[]\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/dealers?id=null",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"dealers"
+									],
+									"query": [
+										{
+											"key": "offset",
+											"value": "0",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"disabled": true
+										},
+										{
+											"key": "sort",
+											"value": "id",
+											"disabled": true
+										},
+										{
+											"key": "direction",
+											"value": "asc",
+											"disabled": true
+										},
+										{
+											"key": "vatcode",
+											"value": "10983490011",
+											"disabled": true
+										},
+										{
+											"key": "id_like",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "idpec_not_null",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "idpec_null",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "fake",
+											"value": "N",
+											"disabled": true
+										},
+										{
+											"key": "status",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "id",
+											"value": "null"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/dealers?all=[object Object]&empty=true&offset=0&limit=10&sort=id&direction=asc",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"dealers"
+											],
+											"query": [
+												{
+													"key": "all",
+													"value": "[object Object]"
+												},
+												{
+													"key": "empty",
+													"value": "true"
+												},
+												{
+													"key": "offset",
+													"value": "0"
+												},
+												{
+													"key": "limit",
+													"value": "10"
+												},
+												{
+													"key": "sort",
+													"value": "id"
+												},
+												{
+													"key": "direction",
+													"value": "asc"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "lists",
+					"item": [
+						{
+							"name": "Parameters present",
+							"item": [
+								{
+									"name": "ID",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test('Lists - parameters present - ID', function (){\r",
+													"    pm.response.to.have.status(200);\r",
+													"})\r",
+													"\r",
+													"pm.test(\"id equal to 1\", function () {\r",
+													"    var jsonData = pm.response.json(); \r",
+													"    pm.expect(jsonData[0].id).to.eql(\"1\");\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/lists/?id=1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"lists",
+												""
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": "1"
+												},
+												{
+													"key": "id_like",
+													"value": "fg",
+													"disabled": true
+												},
+												{
+													"key": "urgent",
+													"value": "true",
+													"disabled": true
+												},
+												{
+													"key": "arrived_start",
+													"value": "2021-04-13",
+													"disabled": true
+												},
+												{
+													"key": "arrived_end",
+													"value": "2021-04-15",
+													"disabled": true
+												},
+												{
+													"key": "created_start",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "created_end",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "arrived_is_not_null",
+													"value": "true",
+													"disabled": true
+												},
+												{
+													"key": "waybill_id",
+													"value": "sadc",
+													"disabled": true
+												},
+												{
+													"key": "dealer_id",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "id_like",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "label_like",
+													"value": "zane",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Urgent",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test('Lists - parameters present - urgent', function (){\r",
+													"    pm.response.to.have.status(200);\r",
+													"})\r",
+													"\r",
+													"pm.test(\"urgent equal to true\", function () {\r",
+													"    var jsonData = pm.response.json(); \r",
+													"    pm.expect(jsonData[0].urgent).to.eql(\"true\");\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/lists/?urgent=true",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"lists",
+												""
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "id_like",
+													"value": "fg",
+													"disabled": true
+												},
+												{
+													"key": "urgent",
+													"value": "true"
+												},
+												{
+													"key": "arrived_start",
+													"value": "2021-04-13",
+													"disabled": true
+												},
+												{
+													"key": "arrived_end",
+													"value": "2021-04-15",
+													"disabled": true
+												},
+												{
+													"key": "created_start",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "created_end",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "arrived_is_not_null",
+													"value": "true",
+													"disabled": true
+												},
+												{
+													"key": "waybill_id",
+													"value": "sadc",
+													"disabled": true
+												},
+												{
+													"key": "dealer_id",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "id_like",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "label_like",
+													"value": "zane",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Waybill_id",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test('Lists - parameters present - waybill_id', function (){\r",
+													"    pm.response.to.have.status(200);\r",
+													"})\r",
+													"\r",
+													"pm.test(\"waybill_id equal to l1\", function () {\r",
+													"    var jsonData = pm.response.json(); \r",
+													"    pm.expect(jsonData[0].waybill_id).to.eql(\"l1\");\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/lists/?waybill_id=l1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"lists",
+												""
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "id_like",
+													"value": "fg",
+													"disabled": true
+												},
+												{
+													"key": "urgent",
+													"value": "true",
+													"disabled": true
+												},
+												{
+													"key": "arrived_start",
+													"value": "2021-04-13",
+													"disabled": true
+												},
+												{
+													"key": "arrived_end",
+													"value": "2021-04-15",
+													"disabled": true
+												},
+												{
+													"key": "created_start",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "created_end",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "arrived_is_not_null",
+													"value": "true",
+													"disabled": true
+												},
+												{
+													"key": "waybill_id",
+													"value": "l1"
+												},
+												{
+													"key": "dealer_id",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "id_like",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "label_like",
+													"value": "zane",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Dealer_id",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test('Lists - parameters present - dealer_id', function (){\r",
+													"    pm.response.to.have.status(200);\r",
+													"})\r",
+													"\r",
+													"pm.test(\"dealer_id equal to 1460\", function () {\r",
+													"    var jsonData = pm.response.json(); \r",
+													"    pm.expect(jsonData[0].dealer_id).to.eql(\"1460\");\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/lists/?dealer_id=1460",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"lists",
+												""
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "id_like",
+													"value": "fg",
+													"disabled": true
+												},
+												{
+													"key": "urgent",
+													"value": "true",
+													"disabled": true
+												},
+												{
+													"key": "arrived_start",
+													"value": "2021-04-13",
+													"disabled": true
+												},
+												{
+													"key": "arrived_end",
+													"value": "2021-04-15",
+													"disabled": true
+												},
+												{
+													"key": "created_start",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "created_end",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "arrived_is_not_null",
+													"value": "true",
+													"disabled": true
+												},
+												{
+													"key": "waybill_id",
+													"value": "sadc",
+													"disabled": true
+												},
+												{
+													"key": "dealer_id",
+													"value": "1460"
+												},
+												{
+													"key": "id_like",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "label_like",
+													"value": "zane",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Parameters not present",
+							"item": [
+								{
+									"name": "ID",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test('Lists - parameters not present - ID', function (){\r",
+													"    pm.response.to.have.status(200);\r",
+													"})\r",
+													"\r",
+													"pm.test(\"Body is empty\", function () {\r",
+													"    pm.response.to.have.body(\"[]\");\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/lists/?id=sadcvdfv",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"lists",
+												""
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": "sadcvdfv"
+												},
+												{
+													"key": "id_like",
+													"value": "fg",
+													"disabled": true
+												},
+												{
+													"key": "urgent",
+													"value": "falsedfv",
+													"disabled": true
+												},
+												{
+													"key": "arrived_start",
+													"value": "2021-04-13",
+													"disabled": true
+												},
+												{
+													"key": "arrived_end",
+													"value": "2021-04-15",
+													"disabled": true
+												},
+												{
+													"key": "created_start",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "created_end",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "arrived_is_not_null",
+													"value": "true",
+													"disabled": true
+												},
+												{
+													"key": "waybill_id",
+													"value": "324we",
+													"disabled": true
+												},
+												{
+													"key": "dealer_id",
+													"value": "dsfsdc1",
+													"disabled": true
+												},
+												{
+													"key": "label_like",
+													"value": "vsvscsd",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Urgent",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test('Lists - parameters not present - urgent', function (){\r",
+													"    pm.response.to.have.status(200);\r",
+													"})\r",
+													"\r",
+													"pm.test(\"Body is empty\", function () {\r",
+													"    pm.response.to.have.body(\"[]\");\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/lists/?urgent=falsedfv",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"lists",
+												""
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": "sadcvdfv",
+													"disabled": true
+												},
+												{
+													"key": "id_like",
+													"value": "fg",
+													"disabled": true
+												},
+												{
+													"key": "urgent",
+													"value": "falsedfv"
+												},
+												{
+													"key": "arrived_start",
+													"value": "2021-04-13",
+													"disabled": true
+												},
+												{
+													"key": "arrived_end",
+													"value": "2021-04-15",
+													"disabled": true
+												},
+												{
+													"key": "created_start",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "created_end",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "arrived_is_not_null",
+													"value": "true",
+													"disabled": true
+												},
+												{
+													"key": "waybill_id",
+													"value": "324we",
+													"disabled": true
+												},
+												{
+													"key": "dealer_id",
+													"value": "dsfsdc1",
+													"disabled": true
+												},
+												{
+													"key": "label_like",
+													"value": "vsvscsd",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Waybill_id",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test('Lists - parameters not present - waybill_id', function (){\r",
+													"    pm.response.to.have.status(200);\r",
+													"})\r",
+													"\r",
+													"pm.test(\"Body is empty\", function () {\r",
+													"    pm.response.to.have.body(\"[]\");\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/lists/?waybill_id=324we",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"lists",
+												""
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": "sadcvdfv",
+													"disabled": true
+												},
+												{
+													"key": "id_like",
+													"value": "fg",
+													"disabled": true
+												},
+												{
+													"key": "urgent",
+													"value": "falsedfv",
+													"disabled": true
+												},
+												{
+													"key": "arrived_start",
+													"value": "2021-04-13",
+													"disabled": true
+												},
+												{
+													"key": "arrived_end",
+													"value": "2021-04-15",
+													"disabled": true
+												},
+												{
+													"key": "created_start",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "created_end",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "arrived_is_not_null",
+													"value": "true",
+													"disabled": true
+												},
+												{
+													"key": "waybill_id",
+													"value": "324we"
+												},
+												{
+													"key": "dealer_id",
+													"value": "dsfsdc1",
+													"disabled": true
+												},
+												{
+													"key": "label_like",
+													"value": "vsvscsd",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Dealer_id",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test('Lists - parameters not present - dealer_id', function (){\r",
+													"    pm.response.to.have.status(200);\r",
+													"})\r",
+													"\r",
+													"pm.test(\"Body is empty\", function () {\r",
+													"    pm.response.to.have.body(\"[]\");\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/lists/?dealer_id=dsfsdc1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"lists",
+												""
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": "sadcvdfv",
+													"disabled": true
+												},
+												{
+													"key": "id_like",
+													"value": "fg",
+													"disabled": true
+												},
+												{
+													"key": "urgent",
+													"value": "falsedfv",
+													"disabled": true
+												},
+												{
+													"key": "arrived_start",
+													"value": "2021-04-13",
+													"disabled": true
+												},
+												{
+													"key": "arrived_end",
+													"value": "2021-04-15",
+													"disabled": true
+												},
+												{
+													"key": "created_start",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "created_end",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "arrived_is_not_null",
+													"value": "true",
+													"disabled": true
+												},
+												{
+													"key": "waybill_id",
+													"value": "324we",
+													"disabled": true
+												},
+												{
+													"key": "dealer_id",
+													"value": "dsfsdc1"
+												},
+												{
+													"key": "label_like",
+													"value": "vsvscsd",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Offset negative",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test('Lists - Offset negative', function (){\r",
+											"    pm.response.to.have.status(500);\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/lists?offset=-1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"lists"
+									],
+									"query": [
+										{
+											"key": "offset",
+											"value": "-1"
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"disabled": true
+										},
+										{
+											"key": "sort",
+											"value": "id",
+											"disabled": true
+										},
+										{
+											"key": "direction",
+											"value": "asc",
+											"disabled": true
+										},
+										{
+											"key": "vatcode",
+											"value": "10983490011",
+											"disabled": true
+										},
+										{
+											"key": "id_like",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "idpec_not_null",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "idpec_null",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "fake",
+											"value": "N",
+											"disabled": true
+										},
+										{
+											"key": "status",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "id",
+											"value": "0036601",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/dealers?all=[object Object]&empty=true&offset=0&limit=10&sort=id&direction=asc",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"dealers"
+											],
+											"query": [
+												{
+													"key": "all",
+													"value": "[object Object]"
+												},
+												{
+													"key": "empty",
+													"value": "true"
+												},
+												{
+													"key": "offset",
+													"value": "0"
+												},
+												{
+													"key": "limit",
+													"value": "10"
+												},
+												{
+													"key": "sort",
+													"value": "id"
+												},
+												{
+													"key": "direction",
+													"value": "asc"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Limit negative",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test('Lists - Limit negative', function (){\r",
+											"    pm.response.to.have.status(500);\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/lists?limit=-10",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"lists"
+									],
+									"query": [
+										{
+											"key": "offset",
+											"value": "-1",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "-10"
+										},
+										{
+											"key": "sort",
+											"value": "id",
+											"disabled": true
+										},
+										{
+											"key": "direction",
+											"value": "asc",
+											"disabled": true
+										},
+										{
+											"key": "vatcode",
+											"value": "10983490011",
+											"disabled": true
+										},
+										{
+											"key": "id_like",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "idpec_not_null",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "idpec_null",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "fake",
+											"value": "N",
+											"disabled": true
+										},
+										{
+											"key": "status",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "id",
+											"value": "0036601",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/dealers?all=[object Object]&empty=true&offset=0&limit=10&sort=id&direction=asc",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"dealers"
+											],
+											"query": [
+												{
+													"key": "all",
+													"value": "[object Object]"
+												},
+												{
+													"key": "empty",
+													"value": "true"
+												},
+												{
+													"key": "offset",
+													"value": "0"
+												},
+												{
+													"key": "limit",
+													"value": "10"
+												},
+												{
+													"key": "sort",
+													"value": "id"
+												},
+												{
+													"key": "direction",
+													"value": "asc"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "List_id null",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test('Lists - list_id null', function (){\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Body is empty\", function () {\r",
+											"    pm.response.to.have.body(\"[]\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/lists?id=null",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"lists"
+									],
+									"query": [
+										{
+											"key": "offset",
+											"value": "0",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"disabled": true
+										},
+										{
+											"key": "sort",
+											"value": "id",
+											"disabled": true
+										},
+										{
+											"key": "direction",
+											"value": "asc",
+											"disabled": true
+										},
+										{
+											"key": "vatcode",
+											"value": "10983490011",
+											"disabled": true
+										},
+										{
+											"key": "id_like",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "idpec_not_null",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "idpec_null",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "fake",
+											"value": "N",
+											"disabled": true
+										},
+										{
+											"key": "status",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "id",
+											"value": "null"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/dealers?all=[object Object]&empty=true&offset=0&limit=10&sort=id&direction=asc",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"dealers"
+											],
+											"query": [
+												{
+													"key": "all",
+													"value": "[object Object]"
+												},
+												{
+													"key": "empty",
+													"value": "true"
+												},
+												{
+													"key": "offset",
+													"value": "0"
+												},
+												{
+													"key": "limit",
+													"value": "10"
+												},
+												{
+													"key": "sort",
+													"value": "id"
+												},
+												{
+													"key": "direction",
+													"value": "asc"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Parameters present",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test('Lists - parameters present', function (){\r",
+											"    pm.response.to.have.status(200);\r",
+											"})\r",
+											"\r",
+											"pm.test(\"id equal to 1\", function () {\r",
+											"    var jsonData = pm.response.json(); \r",
+											"    pm.expect(jsonData[0].id).to.eql(\"1\");\r",
+											"});\r",
+											"\r",
+											"pm.test(\"urgent equal to true\", function () {\r",
+											"    var jsonData = pm.response.json(); \r",
+											"    pm.expect(jsonData[0].urgent).to.eql(\"true\");\r",
+											"});\r",
+											"\r",
+											"pm.test(\"waybill_id equal to l1\", function () {\r",
+											"    var jsonData = pm.response.json(); \r",
+											"    pm.expect(jsonData[0].waybill_id).to.eql(\"l1\");\r",
+											"});\r",
+											"\r",
+											"pm.test(\"dealer_id equal to 1460\", function () {\r",
+											"    var jsonData = pm.response.json(); \r",
+											"    pm.expect(jsonData[0].dealer_id).to.eql(\"1460\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/lists/?id=1&urgent=true&waybill_id=l1&dealer_id=1460",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"lists",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1"
+										},
+										{
+											"key": "id_like",
+											"value": "fg",
+											"disabled": true
+										},
+										{
+											"key": "urgent",
+											"value": "true"
+										},
+										{
+											"key": "arrived_start",
+											"value": "2021-04-13",
+											"disabled": true
+										},
+										{
+											"key": "arrived_end",
+											"value": "2021-04-15",
+											"disabled": true
+										},
+										{
+											"key": "created_start",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "created_end",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "arrived_is_not_null",
+											"value": "true",
+											"disabled": true
+										},
+										{
+											"key": "waybill_id",
+											"value": "l1"
+										},
+										{
+											"key": "dealer_id",
+											"value": "1460"
+										},
+										{
+											"key": "id_like",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "label_like",
+											"value": "zane",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Parameters not present",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test('Lists - parameters not present', function (){\r",
+											"    pm.response.to.have.status(200);\r",
+											"})\r",
+											"\r",
+											"pm.test(\"Body is empty\", function () {\r",
+											"    pm.response.to.have.body(\"[]\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/lists/?id=sadcvdfv&urgent=falsedfv&waybill_id=324we&dealer_id=dsfsdc1&label_like=vsvscsd",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"lists",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "sadcvdfv"
+										},
+										{
+											"key": "id_like",
+											"value": "fg",
+											"disabled": true
+										},
+										{
+											"key": "urgent",
+											"value": "falsedfv"
+										},
+										{
+											"key": "arrived_start",
+											"value": "2021-04-13",
+											"disabled": true
+										},
+										{
+											"key": "arrived_end",
+											"value": "2021-04-15",
+											"disabled": true
+										},
+										{
+											"key": "created_start",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "created_end",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "arrived_is_not_null",
+											"value": "true",
+											"disabled": true
+										},
+										{
+											"key": "waybill_id",
+											"value": "324we"
+										},
+										{
+											"key": "dealer_id",
+											"value": "dsfsdc1"
+										},
+										{
+											"key": "label_like",
+											"value": "vsvscsd"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "practices",
+					"item": [
+						{
+							"name": "Parameters present",
+							"item": [
+								{
+									"name": "ID",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test('Practices - parameters present - ID', function (){\r",
+													"    pm.response.to.have.status(200);\r",
+													"})\r",
+													"\r",
+													"pm.test(\"id equal to p1\", function () {\r",
+													"    var jsonData = pm.response.json(); \r",
+													"    pm.expect(jsonData[0].id).to.eql(\"p1\");\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/practices/?id=p1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"practices",
+												""
+											],
+											"query": [
+												{
+													"key": "id_like",
+													"value": "fg",
+													"disabled": true
+												},
+												{
+													"key": "created_start",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "created_end",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "arrived_is_not_null",
+													"value": "true",
+													"disabled": true
+												},
+												{
+													"key": "id",
+													"value": "p1"
+												},
+												{
+													"key": "urgent",
+													"value": "true",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Urgent",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test('Practices - parameters present - urgent', function (){\r",
+													"    pm.response.to.have.status(200);\r",
+													"})\r",
+													"\r",
+													"pm.test(\"urgent equal to true\", function () {\r",
+													"    var jsonData = pm.response.json(); \r",
+													"    pm.expect(jsonData[0].urgent).to.eql(\"true\");\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/practices/?urgent=true",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"practices",
+												""
+											],
+											"query": [
+												{
+													"key": "id_like",
+													"value": "fg",
+													"disabled": true
+												},
+												{
+													"key": "created_start",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "created_end",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "arrived_is_not_null",
+													"value": "true",
+													"disabled": true
+												},
+												{
+													"key": "id",
+													"value": "adsv",
+													"disabled": true
+												},
+												{
+													"key": "urgent",
+													"value": "true"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "ID like",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test('Practices - parameters present - ID like', function (){\r",
+													"    pm.response.to.have.status(200);\r",
+													"})\r",
+													"\r",
+													"pm.test(\"id equal to p11\", function () {\r",
+													"    var jsonData = pm.response.json(); \r",
+													"    pm.expect(jsonData[0].id).to.eql(\"p11\");\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/practices/?id_like=11",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"practices",
+												""
+											],
+											"query": [
+												{
+													"key": "id_like",
+													"value": "fg",
+													"disabled": true
+												},
+												{
+													"key": "created_start",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "created_end",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "arrived_is_not_null",
+													"value": "true",
+													"disabled": true
+												},
+												{
+													"key": "id",
+													"value": "adsv",
+													"disabled": true
+												},
+												{
+													"key": "urgent",
+													"value": "true",
+													"disabled": true
+												},
+												{
+													"key": "id_like",
+													"value": "11"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Parameters not present",
+							"item": [
+								{
+									"name": "ID",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test('Practices - parameters not present - ID', function (){\r",
+													"    pm.response.to.have.status(200);\r",
+													"})\r",
+													"\r",
+													"pm.test(\"Body is empty\", function () {\r",
+													"    pm.response.to.have.body(\"[]\");\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/practices/?id=adsvasd",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"practices",
+												""
+											],
+											"query": [
+												{
+													"key": "id_like",
+													"value": "fg",
+													"disabled": true
+												},
+												{
+													"key": "created_start",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "created_end",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "arrived_is_not_null",
+													"value": "true",
+													"disabled": true
+												},
+												{
+													"key": "id",
+													"value": "adsvasd"
+												},
+												{
+													"key": "urgent",
+													"value": "trueasd",
+													"disabled": true
+												},
+												{
+													"key": "id_like",
+													"value": "zzz",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "ID like",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test('Practices - parameters not present - ID like', function (){\r",
+													"    pm.response.to.have.status(200);\r",
+													"})\r",
+													"\r",
+													"pm.test(\"Body is empty\", function () {\r",
+													"    pm.response.to.have.body(\"[]\");\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/practices/?id_like=zzz",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"practices",
+												""
+											],
+											"query": [
+												{
+													"key": "id_like",
+													"value": "fg",
+													"disabled": true
+												},
+												{
+													"key": "created_start",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "created_end",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "arrived_is_not_null",
+													"value": "true",
+													"disabled": true
+												},
+												{
+													"key": "id",
+													"value": "adsvasd",
+													"disabled": true
+												},
+												{
+													"key": "urgent",
+													"value": "trueasd",
+													"disabled": true
+												},
+												{
+													"key": "id_like",
+													"value": "zzz"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Urgent",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test('Practices - parameters not present - urgent', function (){\r",
+													"    pm.response.to.have.status(200);\r",
+													"})\r",
+													"\r",
+													"pm.test(\"Body is empty\", function () {\r",
+													"    pm.response.to.have.body(\"[]\");\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/practices/?urgent=trueasd",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"practices",
+												""
+											],
+											"query": [
+												{
+													"key": "id_like",
+													"value": "fg",
+													"disabled": true
+												},
+												{
+													"key": "created_start",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "created_end",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "arrived_is_not_null",
+													"value": "true",
+													"disabled": true
+												},
+												{
+													"key": "id",
+													"value": "adsvasd",
+													"disabled": true
+												},
+												{
+													"key": "urgent",
+													"value": "trueasd"
+												},
+												{
+													"key": "id_like",
+													"value": "zzz",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Offset negative",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test('Practices - Offset negative', function (){\r",
+											"    pm.response.to.have.status(500);\r",
+											"})\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/practices?offset=-1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"practices"
+									],
+									"query": [
+										{
+											"key": "offset",
+											"value": "-1"
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"disabled": true
+										},
+										{
+											"key": "sort",
+											"value": "id",
+											"disabled": true
+										},
+										{
+											"key": "direction",
+											"value": "asc",
+											"disabled": true
+										},
+										{
+											"key": "vatcode",
+											"value": "10983490011",
+											"disabled": true
+										},
+										{
+											"key": "id_like",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "idpec_not_null",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "idpec_null",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "fake",
+											"value": "N",
+											"disabled": true
+										},
+										{
+											"key": "status",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "id",
+											"value": "0036601",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/dealers?all=[object Object]&empty=true&offset=0&limit=10&sort=id&direction=asc",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"dealers"
+											],
+											"query": [
+												{
+													"key": "all",
+													"value": "[object Object]"
+												},
+												{
+													"key": "empty",
+													"value": "true"
+												},
+												{
+													"key": "offset",
+													"value": "0"
+												},
+												{
+													"key": "limit",
+													"value": "10"
+												},
+												{
+													"key": "sort",
+													"value": "id"
+												},
+												{
+													"key": "direction",
+													"value": "asc"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Limit negative",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test('Practices - Limit negative', function (){\r",
+											"    pm.response.to.have.status(500);\r",
+											"})\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/practices?limit=-10",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"practices"
+									],
+									"query": [
+										{
+											"key": "offset",
+											"value": "-1",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "-10"
+										},
+										{
+											"key": "sort",
+											"value": "id",
+											"disabled": true
+										},
+										{
+											"key": "direction",
+											"value": "asc",
+											"disabled": true
+										},
+										{
+											"key": "vatcode",
+											"value": "10983490011",
+											"disabled": true
+										},
+										{
+											"key": "id_like",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "idpec_not_null",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "idpec_null",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "fake",
+											"value": "N",
+											"disabled": true
+										},
+										{
+											"key": "status",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "id",
+											"value": "0036601",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/dealers?all=[object Object]&empty=true&offset=0&limit=10&sort=id&direction=asc",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"dealers"
+											],
+											"query": [
+												{
+													"key": "all",
+													"value": "[object Object]"
+												},
+												{
+													"key": "empty",
+													"value": "true"
+												},
+												{
+													"key": "offset",
+													"value": "0"
+												},
+												{
+													"key": "limit",
+													"value": "10"
+												},
+												{
+													"key": "sort",
+													"value": "id"
+												},
+												{
+													"key": "direction",
+													"value": "asc"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Practice_id null",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test('Practices - practice_id null', function (){\r",
+											"    pm.response.to.have.status(200);\r",
+											"})\r",
+											"\r",
+											"pm.test(\"Body is empty\", function () {\r",
+											"    pm.response.to.have.body(\"[]\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/practices?id=null",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"practices"
+									],
+									"query": [
+										{
+											"key": "offset",
+											"value": "0",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"disabled": true
+										},
+										{
+											"key": "sort",
+											"value": "id",
+											"disabled": true
+										},
+										{
+											"key": "direction",
+											"value": "asc",
+											"disabled": true
+										},
+										{
+											"key": "vatcode",
+											"value": "10983490011",
+											"disabled": true
+										},
+										{
+											"key": "id_like",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "idpec_not_null",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "idpec_null",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "fake",
+											"value": "N",
+											"disabled": true
+										},
+										{
+											"key": "status",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "id",
+											"value": "null"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/dealers?all=[object Object]&empty=true&offset=0&limit=10&sort=id&direction=asc",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"dealers"
+											],
+											"query": [
+												{
+													"key": "all",
+													"value": "[object Object]"
+												},
+												{
+													"key": "empty",
+													"value": "true"
+												},
+												{
+													"key": "offset",
+													"value": "0"
+												},
+												{
+													"key": "limit",
+													"value": "10"
+												},
+												{
+													"key": "sort",
+													"value": "id"
+												},
+												{
+													"key": "direction",
+													"value": "asc"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Parameters present",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test('Practices - parameters present', function (){\r",
+											"    pm.response.to.have.status(200);\r",
+											"})\r",
+											"\r",
+											"pm.test(\"id equal to p1\", function () {\r",
+											"    var jsonData = pm.response.json(); \r",
+											"    pm.expect(jsonData[0].id).to.eql(\"p1\");\r",
+											"});\r",
+											"\r",
+											"pm.test(\"urgent equal to false\", function () {\r",
+											"    var jsonData = pm.response.json(); \r",
+											"    pm.expect(jsonData[0].urgent).to.eql(\"false\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/practices/?id=p1&urgent=false",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"practices",
+										""
+									],
+									"query": [
+										{
+											"key": "id_like",
+											"value": "fg",
+											"disabled": true
+										},
+										{
+											"key": "created_start",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "created_end",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "arrived_is_not_null",
+											"value": "true",
+											"disabled": true
+										},
+										{
+											"key": "id",
+											"value": "p1"
+										},
+										{
+											"key": "urgent",
+											"value": "false"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Parameters not present",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test('Practices - parameters not present', function (){\r",
+											"    pm.response.to.have.status(200);\r",
+											"})\r",
+											"\r",
+											"pm.test(\"Body is empty\", function () {\r",
+											"    pm.response.to.have.body(\"[]\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/practices/?id=adsvasd&urgent=trueasd",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"practices",
+										""
+									],
+									"query": [
+										{
+											"key": "id_like",
+											"value": "fg",
+											"disabled": true
+										},
+										{
+											"key": "created_start",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "created_end",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "arrived_is_not_null",
+											"value": "true",
+											"disabled": true
+										},
+										{
+											"key": "id",
+											"value": "adsvasd"
+										},
+										{
+											"key": "urgent",
+											"value": "trueasd"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "waybills",
+					"item": [
+						{
+							"name": "Parameters present",
+							"item": [
+								{
+									"name": "ID",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test('Waybills - parameters present - ID', function (){\r",
+													"    pm.response.to.have.status(200);\r",
+													"})\r",
+													"\r",
+													"pm.test(\"id equal to l1\", function () {\r",
+													"    var jsonData = pm.response.json(); \r",
+													"    pm.expect(jsonData[0].id).to.eql(\"l1\");\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/waybills/?id=l1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"waybills",
+												""
+											],
+											"query": [
+												{
+													"key": "id_like",
+													"value": "fg",
+													"disabled": true
+												},
+												{
+													"key": "urgent",
+													"value": "false",
+													"disabled": true
+												},
+												{
+													"key": "arrived_start",
+													"value": "2021-04-13",
+													"disabled": true
+												},
+												{
+													"key": "arrived_end",
+													"value": "2021-04-15",
+													"disabled": true
+												},
+												{
+													"key": "created_start",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "created_end",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "arrived_is_not_null",
+													"value": "true",
+													"disabled": true
+												},
+												{
+													"key": "id",
+													"value": "l1"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "ID like",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test('Waybills - parameters present - ID like', function (){\r",
+													"    pm.response.to.have.status(200);\r",
+													"})\r",
+													"\r",
+													"pm.test(\"id like equal to ldv9\", function () {\r",
+													"    var jsonData = pm.response.json(); \r",
+													"    pm.expect(jsonData[0].id).to.eql(\"ldv9\");\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/waybills/?id_like=9",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"waybills",
+												""
+											],
+											"query": [
+												{
+													"key": "id_like",
+													"value": "9"
+												},
+												{
+													"key": "urgent",
+													"value": "false",
+													"disabled": true
+												},
+												{
+													"key": "arrived_start",
+													"value": "2021-04-13",
+													"disabled": true
+												},
+												{
+													"key": "arrived_end",
+													"value": "2021-04-15",
+													"disabled": true
+												},
+												{
+													"key": "created_start",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "created_end",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "arrived_is_not_null",
+													"value": "true",
+													"disabled": true
+												},
+												{
+													"key": "id",
+													"value": "sadc",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Urgent",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test('Waybills - parameters present - urgent', function (){\r",
+													"    pm.response.to.have.status(200);\r",
+													"})\r",
+													"\r",
+													"pm.test(\"urgent like equal to false\", function () {\r",
+													"    var jsonData = pm.response.json(); \r",
+													"    pm.expect(jsonData[0].urgent).to.eql(\"false\");\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/waybills/?urgent=false",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"waybills",
+												""
+											],
+											"query": [
+												{
+													"key": "id_like",
+													"value": "fg",
+													"disabled": true
+												},
+												{
+													"key": "urgent",
+													"value": "false"
+												},
+												{
+													"key": "arrived_start",
+													"value": "2021-04-13",
+													"disabled": true
+												},
+												{
+													"key": "arrived_end",
+													"value": "2021-04-15",
+													"disabled": true
+												},
+												{
+													"key": "created_start",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "created_end",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "arrived_is_not_null",
+													"value": "true",
+													"disabled": true
+												},
+												{
+													"key": "id",
+													"value": "sadc",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Parameters not present",
+							"item": [
+								{
+									"name": "ID",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test('Waybills - parameters not present - ID', function (){\r",
+													"    pm.response.to.have.status(200);\r",
+													"})\r",
+													"\r",
+													"pm.test(\"Body is empty\", function () {\r",
+													"    pm.response.to.have.body(\"[]\");\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/waybills/?id=sadcasd",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"waybills",
+												""
+											],
+											"query": [
+												{
+													"key": "id_like",
+													"value": "fg",
+													"disabled": true
+												},
+												{
+													"key": "urgent",
+													"value": "false",
+													"disabled": true
+												},
+												{
+													"key": "arrived_start",
+													"value": "2021-04-13",
+													"disabled": true
+												},
+												{
+													"key": "arrived_end",
+													"value": "2021-04-15",
+													"disabled": true
+												},
+												{
+													"key": "created_start",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "created_end",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "arrived_is_not_null",
+													"value": "true",
+													"disabled": true
+												},
+												{
+													"key": "id",
+													"value": "sadcasd"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "ID like",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test('Waybills - parameters not present - ID like', function (){\r",
+													"    pm.response.to.have.status(200);\r",
+													"})\r",
+													"\r",
+													"pm.test(\"Body is empty\", function () {\r",
+													"    pm.response.to.have.body(\"[]\");\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/waybills/?id_like=fgdvdfv",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"waybills",
+												""
+											],
+											"query": [
+												{
+													"key": "id_like",
+													"value": "fgdvdfv"
+												},
+												{
+													"key": "urgent",
+													"value": "false",
+													"disabled": true
+												},
+												{
+													"key": "arrived_start",
+													"value": "2021-04-13",
+													"disabled": true
+												},
+												{
+													"key": "arrived_end",
+													"value": "2021-04-15",
+													"disabled": true
+												},
+												{
+													"key": "created_start",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "created_end",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "arrived_is_not_null",
+													"value": "true",
+													"disabled": true
+												},
+												{
+													"key": "id",
+													"value": "sadc",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Urgent",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test('Waybills - parameters not present - urgent', function (){\r",
+													"    pm.response.to.have.status(200);\r",
+													"})\r",
+													"\r",
+													"pm.test(\"Body is empty\", function () {\r",
+													"    pm.response.to.have.body(\"[]\");\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/waybills/?urgent=falsedas",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"waybills",
+												""
+											],
+											"query": [
+												{
+													"key": "id_like",
+													"value": "fg",
+													"disabled": true
+												},
+												{
+													"key": "urgent",
+													"value": "falsedas"
+												},
+												{
+													"key": "arrived_start",
+													"value": "2021-04-13",
+													"disabled": true
+												},
+												{
+													"key": "arrived_end",
+													"value": "2021-04-15",
+													"disabled": true
+												},
+												{
+													"key": "created_start",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "created_end",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "arrived_is_not_null",
+													"value": "true",
+													"disabled": true
+												},
+												{
+													"key": "id",
+													"value": "sadc",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Offset negative",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test('Waybills - Offset negative', function (){\r",
+											"    pm.response.to.have.status(500);\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/waybills?offset=-1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"waybills"
+									],
+									"query": [
+										{
+											"key": "offset",
+											"value": "-1"
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"disabled": true
+										},
+										{
+											"key": "sort",
+											"value": "id",
+											"disabled": true
+										},
+										{
+											"key": "direction",
+											"value": "asc",
+											"disabled": true
+										},
+										{
+											"key": "vatcode",
+											"value": "10983490011",
+											"disabled": true
+										},
+										{
+											"key": "id_like",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "idpec_not_null",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "idpec_null",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "fake",
+											"value": "N",
+											"disabled": true
+										},
+										{
+											"key": "status",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "id",
+											"value": "0036601",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/dealers?all=[object Object]&empty=true&offset=0&limit=10&sort=id&direction=asc",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"dealers"
+											],
+											"query": [
+												{
+													"key": "all",
+													"value": "[object Object]"
+												},
+												{
+													"key": "empty",
+													"value": "true"
+												},
+												{
+													"key": "offset",
+													"value": "0"
+												},
+												{
+													"key": "limit",
+													"value": "10"
+												},
+												{
+													"key": "sort",
+													"value": "id"
+												},
+												{
+													"key": "direction",
+													"value": "asc"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Limit negative",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test('Waybills - Limit negative', function (){\r",
+											"    pm.response.to.have.status(500);\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/waybills?limit=-10",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"waybills"
+									],
+									"query": [
+										{
+											"key": "offset",
+											"value": "-1",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "-10"
+										},
+										{
+											"key": "sort",
+											"value": "id",
+											"disabled": true
+										},
+										{
+											"key": "direction",
+											"value": "asc",
+											"disabled": true
+										},
+										{
+											"key": "vatcode",
+											"value": "10983490011",
+											"disabled": true
+										},
+										{
+											"key": "id_like",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "idpec_not_null",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "idpec_null",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "fake",
+											"value": "N",
+											"disabled": true
+										},
+										{
+											"key": "status",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "id",
+											"value": "0036601",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/dealers?all=[object Object]&empty=true&offset=0&limit=10&sort=id&direction=asc",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"dealers"
+											],
+											"query": [
+												{
+													"key": "all",
+													"value": "[object Object]"
+												},
+												{
+													"key": "empty",
+													"value": "true"
+												},
+												{
+													"key": "offset",
+													"value": "0"
+												},
+												{
+													"key": "limit",
+													"value": "10"
+												},
+												{
+													"key": "sort",
+													"value": "id"
+												},
+												{
+													"key": "direction",
+													"value": "asc"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Waybill_id null",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test('Waybills - waybill_id null', function (){\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Body is empty\", function () {\r",
+											"    pm.response.to.have.body(\"[]\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/dealers?id=null",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"dealers"
+									],
+									"query": [
+										{
+											"key": "offset",
+											"value": "0",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"disabled": true
+										},
+										{
+											"key": "sort",
+											"value": "id",
+											"disabled": true
+										},
+										{
+											"key": "direction",
+											"value": "asc",
+											"disabled": true
+										},
+										{
+											"key": "vatcode",
+											"value": "10983490011",
+											"disabled": true
+										},
+										{
+											"key": "id_like",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "idpec_not_null",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "idpec_null",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "fake",
+											"value": "N",
+											"disabled": true
+										},
+										{
+											"key": "status",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "id",
+											"value": "null"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/dealers?all=[object Object]&empty=true&offset=0&limit=10&sort=id&direction=asc",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"dealers"
+											],
+											"query": [
+												{
+													"key": "all",
+													"value": "[object Object]"
+												},
+												{
+													"key": "empty",
+													"value": "true"
+												},
+												{
+													"key": "offset",
+													"value": "0"
+												},
+												{
+													"key": "limit",
+													"value": "10"
+												},
+												{
+													"key": "sort",
+													"value": "id"
+												},
+												{
+													"key": "direction",
+													"value": "asc"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Parameters present",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test('Waybills - parameters present', function (){\r",
+											"    pm.response.to.have.status(200);\r",
+											"})\r",
+											"\r",
+											"pm.test(\"id equal to l1\", function () {\r",
+											"    var jsonData = pm.response.json(); \r",
+											"    pm.expect(jsonData[0].id).to.eql(\"l1\");\r",
+											"});\r",
+											"\r",
+											"pm.test(\"urgent equal to false\", function () {\r",
+											"    var jsonData = pm.response.json(); \r",
+											"    pm.expect(jsonData[0].urgent).to.eql(\"true\");\r",
+											"});\r",
+											"\r",
+											"pm.test(\"arrived_at equal to 2021-05-03T15:40:46.946783700Z\", function () {\r",
+											"    var jsonData = pm.response.json(); \r",
+											"    pm.expect(jsonData[0].arrived_at).to.eql(\"2021-05-03T15:40:46.946783700Z\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/waybills/?id=l1&urgent=true&arrived_start=2021-04-13",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"waybills",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "l1"
+										},
+										{
+											"key": "id_like",
+											"value": "fg",
+											"disabled": true
+										},
+										{
+											"key": "urgent",
+											"value": "true"
+										},
+										{
+											"key": "arrived_start",
+											"value": "2021-04-13"
+										},
+										{
+											"key": "arrived_end",
+											"value": "2021-04-15",
+											"disabled": true
+										},
+										{
+											"key": "created_start",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "created_end",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "arrived_is_not_null",
+											"value": "true",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Parameters not present",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test('Waybills - parameters not present', function (){\r",
+											"    pm.response.to.have.status(200);\r",
+											"})\r",
+											"\r",
+											"pm.test(\"Body is empty\", function () {\r",
+											"    pm.response.to.have.body(\"[]\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/waybills/?id=sadcvdfv&urgent=falsedfv",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"waybills",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "sadcvdfv"
+										},
+										{
+											"key": "id_like",
+											"value": "fg",
+											"disabled": true
+										},
+										{
+											"key": "urgent",
+											"value": "falsedfv"
+										},
+										{
+											"key": "arrived_start",
+											"value": "2021-04-13",
+											"disabled": true
+										},
+										{
+											"key": "arrived_end",
+											"value": "2021-04-15",
+											"disabled": true
+										},
+										{
+											"key": "created_start",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "created_end",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "arrived_is_not_null",
+											"value": "true",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "documents",
+					"item": [
+						{
+							"name": "Documents no parameters",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test('Documents no parameters', function (){\r",
+											"    pm.response.to.have.status(200);\r",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/documents",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"documents"
+									],
+									"query": [
+										{
+											"key": "offset",
+											"value": "0",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"disabled": true
+										},
+										{
+											"key": "sort",
+											"value": "id",
+											"disabled": true
+										},
+										{
+											"key": "direction",
+											"value": "asc",
+											"disabled": true
+										},
+										{
+											"key": "id",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/dealers?all=[object Object]&empty=true&offset=0&limit=10&sort=id&direction=asc",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"dealers"
+											],
+											"query": [
+												{
+													"key": "all",
+													"value": "[object Object]"
+												},
+												{
+													"key": "empty",
+													"value": "true"
+												},
+												{
+													"key": "offset",
+													"value": "0"
+												},
+												{
+													"key": "limit",
+													"value": "10"
+												},
+												{
+													"key": "sort",
+													"value": "id"
+												},
+												{
+													"key": "direction",
+													"value": "asc"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Parameters present - ID",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test('Documents no parameters', function (){\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"id equal to 1\", function () {\r",
+											"    var jsonData = pm.response.json(); \r",
+											"    pm.expect(jsonData[0].id).to.eql(\"1\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/documents?id=1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"documents"
+									],
+									"query": [
+										{
+											"key": "offset",
+											"value": "0",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"disabled": true
+										},
+										{
+											"key": "sort",
+											"value": "id",
+											"disabled": true
+										},
+										{
+											"key": "direction",
+											"value": "asc",
+											"disabled": true
+										},
+										{
+											"key": "vatcode",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "id_like",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "idpec_not_null",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "idpec_null",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "fake",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "status",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/dealers?all=[object Object]&empty=true&offset=0&limit=10&sort=id&direction=asc",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"dealers"
+											],
+											"query": [
+												{
+													"key": "all",
+													"value": "[object Object]"
+												},
+												{
+													"key": "empty",
+													"value": "true"
+												},
+												{
+													"key": "offset",
+													"value": "0"
+												},
+												{
+													"key": "limit",
+													"value": "10"
+												},
+												{
+													"key": "sort",
+													"value": "id"
+												},
+												{
+													"key": "direction",
+													"value": "asc"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Parameters not present - ID",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test('Documents no parameters', function (){\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Body is empty\", function () {\r",
+											"    pm.response.to.have.body(\"[]\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/documents/?id=23423",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"documents",
+										""
+									],
+									"query": [
+										{
+											"key": "offset",
+											"value": "0",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"disabled": true
+										},
+										{
+											"key": "sort",
+											"value": "id",
+											"disabled": true
+										},
+										{
+											"key": "direction",
+											"value": "asc",
+											"disabled": true
+										},
+										{
+											"key": "vatcode",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "id_like",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "idpec_not_null",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "idpec_null",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "fake",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "status",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "id",
+											"value": "23423"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/dealers?all=[object Object]&empty=true&offset=0&limit=10&sort=id&direction=asc",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"dealers"
+											],
+											"query": [
+												{
+													"key": "all",
+													"value": "[object Object]"
+												},
+												{
+													"key": "empty",
+													"value": "true"
+												},
+												{
+													"key": "offset",
+													"value": "0"
+												},
+												{
+													"key": "limit",
+													"value": "10"
+												},
+												{
+													"key": "sort",
+													"value": "id"
+												},
+												{
+													"key": "direction",
+													"value": "asc"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Offset negative",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test('Docauments - Offset negative', function (){\r",
+											"    pm.response.to.have.status(500);\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/documents?offset=-1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"documents"
+									],
+									"query": [
+										{
+											"key": "offset",
+											"value": "-1"
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"disabled": true
+										},
+										{
+											"key": "sort",
+											"value": "id",
+											"disabled": true
+										},
+										{
+											"key": "direction",
+											"value": "asc",
+											"disabled": true
+										},
+										{
+											"key": "vatcode",
+											"value": "10983490011",
+											"disabled": true
+										},
+										{
+											"key": "id_like",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "idpec_not_null",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "idpec_null",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "fake",
+											"value": "N",
+											"disabled": true
+										},
+										{
+											"key": "status",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "id",
+											"value": "0036601",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/dealers?all=[object Object]&empty=true&offset=0&limit=10&sort=id&direction=asc",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"dealers"
+											],
+											"query": [
+												{
+													"key": "all",
+													"value": "[object Object]"
+												},
+												{
+													"key": "empty",
+													"value": "true"
+												},
+												{
+													"key": "offset",
+													"value": "0"
+												},
+												{
+													"key": "limit",
+													"value": "10"
+												},
+												{
+													"key": "sort",
+													"value": "id"
+												},
+												{
+													"key": "direction",
+													"value": "asc"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Limit negative",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test('Dealers - Limit negative', function (){\r",
+											"    pm.response.to.have.status(500);\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/dealers?limit=-10",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"dealers"
+									],
+									"query": [
+										{
+											"key": "offset",
+											"value": "-1",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "-10"
+										},
+										{
+											"key": "sort",
+											"value": "id",
+											"disabled": true
+										},
+										{
+											"key": "direction",
+											"value": "asc",
+											"disabled": true
+										},
+										{
+											"key": "vatcode",
+											"value": "10983490011",
+											"disabled": true
+										},
+										{
+											"key": "id_like",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "idpec_not_null",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "idpec_null",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "fake",
+											"value": "N",
+											"disabled": true
+										},
+										{
+											"key": "status",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "id",
+											"value": "0036601",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/dealers?all=[object Object]&empty=true&offset=0&limit=10&sort=id&direction=asc",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"dealers"
+											],
+											"query": [
+												{
+													"key": "all",
+													"value": "[object Object]"
+												},
+												{
+													"key": "empty",
+													"value": "true"
+												},
+												{
+													"key": "offset",
+													"value": "0"
+												},
+												{
+													"key": "limit",
+													"value": "10"
+												},
+												{
+													"key": "sort",
+													"value": "id"
+												},
+												{
+													"key": "direction",
+													"value": "asc"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Document_id null",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test('Documents - document_id null', function (){\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Body is empty\", function () {\r",
+											"    pm.response.to.have.body(\"[]\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/documents?id=null",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"documents"
+									],
+									"query": [
+										{
+											"key": "offset",
+											"value": "0",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"disabled": true
+										},
+										{
+											"key": "sort",
+											"value": "id",
+											"disabled": true
+										},
+										{
+											"key": "direction",
+											"value": "asc",
+											"disabled": true
+										},
+										{
+											"key": "vatcode",
+											"value": "10983490011",
+											"disabled": true
+										},
+										{
+											"key": "id_like",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "idpec_not_null",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "idpec_null",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "fake",
+											"value": "N",
+											"disabled": true
+										},
+										{
+											"key": "status",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "id",
+											"value": "null"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/dealers?all=[object Object]&empty=true&offset=0&limit=10&sort=id&direction=asc",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"dealers"
+											],
+											"query": [
+												{
+													"key": "all",
+													"value": "[object Object]"
+												},
+												{
+													"key": "empty",
+													"value": "true"
+												},
+												{
+													"key": "offset",
+													"value": "0"
+												},
+												{
+													"key": "limit",
+													"value": "10"
+												},
+												{
+													"key": "sort",
+													"value": "id"
+												},
+												{
+													"key": "direction",
+													"value": "asc"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "requests",
+					"item": [
+						{
+							"name": "Parameters present",
+							"item": [
+								{
+									"name": "ID",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test('Practices - parameters present - ID', function (){\r",
+													"    pm.response.to.have.status(200);\r",
+													"})\r",
+													"\r",
+													"pm.test(\"id equal to p1\", function () {\r",
+													"    var jsonData = pm.response.json(); \r",
+													"    pm.expect(jsonData[0].id).to.eql(\"p1\");\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/practices/?id=p1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"practices",
+												""
+											],
+											"query": [
+												{
+													"key": "id_like",
+													"value": "fg",
+													"disabled": true
+												},
+												{
+													"key": "created_start",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "created_end",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "arrived_is_not_null",
+													"value": "true",
+													"disabled": true
+												},
+												{
+													"key": "id",
+													"value": "p1"
+												},
+												{
+													"key": "urgent",
+													"value": "true",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Urgent",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test('Practices - parameters present - urgent', function (){\r",
+													"    pm.response.to.have.status(200);\r",
+													"})\r",
+													"\r",
+													"pm.test(\"urgent equal to true\", function () {\r",
+													"    var jsonData = pm.response.json(); \r",
+													"    pm.expect(jsonData[0].urgent).to.eql(\"true\");\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/practices/?urgent=true",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"practices",
+												""
+											],
+											"query": [
+												{
+													"key": "id_like",
+													"value": "fg",
+													"disabled": true
+												},
+												{
+													"key": "created_start",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "created_end",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "arrived_is_not_null",
+													"value": "true",
+													"disabled": true
+												},
+												{
+													"key": "id",
+													"value": "adsv",
+													"disabled": true
+												},
+												{
+													"key": "urgent",
+													"value": "true"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "ID like",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test('Practices - parameters present - ID like', function (){\r",
+													"    pm.response.to.have.status(200);\r",
+													"})\r",
+													"\r",
+													"pm.test(\"id equal to p11\", function () {\r",
+													"    var jsonData = pm.response.json(); \r",
+													"    pm.expect(jsonData[0].id).to.eql(\"p11\");\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/practices/?id_like=11",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"practices",
+												""
+											],
+											"query": [
+												{
+													"key": "id_like",
+													"value": "fg",
+													"disabled": true
+												},
+												{
+													"key": "created_start",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "created_end",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "arrived_is_not_null",
+													"value": "true",
+													"disabled": true
+												},
+												{
+													"key": "id",
+													"value": "adsv",
+													"disabled": true
+												},
+												{
+													"key": "urgent",
+													"value": "true",
+													"disabled": true
+												},
+												{
+													"key": "id_like",
+													"value": "11"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Parameters not present",
+							"item": [
+								{
+									"name": "ID",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test('Practices - parameters not present - ID', function (){\r",
+													"    pm.response.to.have.status(200);\r",
+													"})\r",
+													"\r",
+													"pm.test(\"Body is empty\", function () {\r",
+													"    pm.response.to.have.body(\"[]\");\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/practices/?id=adsvasd",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"practices",
+												""
+											],
+											"query": [
+												{
+													"key": "id_like",
+													"value": "fg",
+													"disabled": true
+												},
+												{
+													"key": "created_start",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "created_end",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "arrived_is_not_null",
+													"value": "true",
+													"disabled": true
+												},
+												{
+													"key": "id",
+													"value": "adsvasd"
+												},
+												{
+													"key": "urgent",
+													"value": "trueasd",
+													"disabled": true
+												},
+												{
+													"key": "id_like",
+													"value": "zzz",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "ID like",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test('Practices - parameters not present - ID like', function (){\r",
+													"    pm.response.to.have.status(200);\r",
+													"})\r",
+													"\r",
+													"pm.test(\"Body is empty\", function () {\r",
+													"    pm.response.to.have.body(\"[]\");\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/practices/?id_like=zzz",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"practices",
+												""
+											],
+											"query": [
+												{
+													"key": "id_like",
+													"value": "fg",
+													"disabled": true
+												},
+												{
+													"key": "created_start",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "created_end",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "arrived_is_not_null",
+													"value": "true",
+													"disabled": true
+												},
+												{
+													"key": "id",
+													"value": "adsvasd",
+													"disabled": true
+												},
+												{
+													"key": "urgent",
+													"value": "trueasd",
+													"disabled": true
+												},
+												{
+													"key": "id_like",
+													"value": "zzz"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Urgent",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test('Practices - parameters not present - urgent', function (){\r",
+													"    pm.response.to.have.status(200);\r",
+													"})\r",
+													"\r",
+													"pm.test(\"Body is empty\", function () {\r",
+													"    pm.response.to.have.body(\"[]\");\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/practices/?urgent=trueasd",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"practices",
+												""
+											],
+											"query": [
+												{
+													"key": "id_like",
+													"value": "fg",
+													"disabled": true
+												},
+												{
+													"key": "created_start",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "created_end",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "arrived_is_not_null",
+													"value": "true",
+													"disabled": true
+												},
+												{
+													"key": "id",
+													"value": "adsvasd",
+													"disabled": true
+												},
+												{
+													"key": "urgent",
+													"value": "trueasd"
+												},
+												{
+													"key": "id_like",
+													"value": "zzz",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Offset negative",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test('Practices - Offset negative', function (){\r",
+											"    pm.response.to.have.status(500);\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/requests?offset=-1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"requests"
+									],
+									"query": [
+										{
+											"key": "offset",
+											"value": "-1"
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"disabled": true
+										},
+										{
+											"key": "sort",
+											"value": "id",
+											"disabled": true
+										},
+										{
+											"key": "direction",
+											"value": "asc",
+											"disabled": true
+										},
+										{
+											"key": "vatcode",
+											"value": "10983490011",
+											"disabled": true
+										},
+										{
+											"key": "id_like",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "idpec_not_null",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "idpec_null",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "fake",
+											"value": "N",
+											"disabled": true
+										},
+										{
+											"key": "status",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "id",
+											"value": "0036601",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/dealers?all=[object Object]&empty=true&offset=0&limit=10&sort=id&direction=asc",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"dealers"
+											],
+											"query": [
+												{
+													"key": "all",
+													"value": "[object Object]"
+												},
+												{
+													"key": "empty",
+													"value": "true"
+												},
+												{
+													"key": "offset",
+													"value": "0"
+												},
+												{
+													"key": "limit",
+													"value": "10"
+												},
+												{
+													"key": "sort",
+													"value": "id"
+												},
+												{
+													"key": "direction",
+													"value": "asc"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Limit negative",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test('Practices - Limit negative', function (){\r",
+											"    pm.response.to.have.status(500);\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/requests?limit=-10",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"requests"
+									],
+									"query": [
+										{
+											"key": "offset",
+											"value": "-1",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "-10"
+										},
+										{
+											"key": "sort",
+											"value": "id",
+											"disabled": true
+										},
+										{
+											"key": "direction",
+											"value": "asc",
+											"disabled": true
+										},
+										{
+											"key": "vatcode",
+											"value": "10983490011",
+											"disabled": true
+										},
+										{
+											"key": "id_like",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "idpec_not_null",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "idpec_null",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "fake",
+											"value": "N",
+											"disabled": true
+										},
+										{
+											"key": "status",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "id",
+											"value": "0036601",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/dealers?all=[object Object]&empty=true&offset=0&limit=10&sort=id&direction=asc",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"dealers"
+											],
+											"query": [
+												{
+													"key": "all",
+													"value": "[object Object]"
+												},
+												{
+													"key": "empty",
+													"value": "true"
+												},
+												{
+													"key": "offset",
+													"value": "0"
+												},
+												{
+													"key": "limit",
+													"value": "10"
+												},
+												{
+													"key": "sort",
+													"value": "id"
+												},
+												{
+													"key": "direction",
+													"value": "asc"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Request_id null",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test('Practices - practice_id null', function (){\r",
+											"    pm.response.to.have.status(200);\r",
+											"})\r",
+											"\r",
+											"pm.test(\"Body is empty\", function () {\r",
+											"    pm.response.to.have.body(\"[]\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/requests?id=null",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"requests"
+									],
+									"query": [
+										{
+											"key": "offset",
+											"value": "0",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"disabled": true
+										},
+										{
+											"key": "sort",
+											"value": "id",
+											"disabled": true
+										},
+										{
+											"key": "direction",
+											"value": "asc",
+											"disabled": true
+										},
+										{
+											"key": "vatcode",
+											"value": "10983490011",
+											"disabled": true
+										},
+										{
+											"key": "id_like",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "idpec_not_null",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "idpec_null",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "fake",
+											"value": "N",
+											"disabled": true
+										},
+										{
+											"key": "status",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "id",
+											"value": "null"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/dealers?all=[object Object]&empty=true&offset=0&limit=10&sort=id&direction=asc",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"dealers"
+											],
+											"query": [
+												{
+													"key": "all",
+													"value": "[object Object]"
+												},
+												{
+													"key": "empty",
+													"value": "true"
+												},
+												{
+													"key": "offset",
+													"value": "0"
+												},
+												{
+													"key": "limit",
+													"value": "10"
+												},
+												{
+													"key": "sort",
+													"value": "id"
+												},
+												{
+													"key": "direction",
+													"value": "asc"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Parameters present",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test('Practices - parameters present', function (){\r",
+											"    pm.response.to.have.status(200);\r",
+											"})\r",
+											"\r",
+											"pm.test(\"id equal to p1\", function () {\r",
+											"    var jsonData = pm.response.json(); \r",
+											"    pm.expect(jsonData[0].id).to.eql(\"p1\");\r",
+											"});\r",
+											"\r",
+											"pm.test(\"urgent equal to false\", function () {\r",
+											"    var jsonData = pm.response.json(); \r",
+											"    pm.expect(jsonData[0].urgent).to.eql(\"false\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/practices/?id=p1&urgent=false",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"practices",
+										""
+									],
+									"query": [
+										{
+											"key": "id_like",
+											"value": "fg",
+											"disabled": true
+										},
+										{
+											"key": "created_start",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "created_end",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "arrived_is_not_null",
+											"value": "true",
+											"disabled": true
+										},
+										{
+											"key": "id",
+											"value": "p1"
+										},
+										{
+											"key": "urgent",
+											"value": "false"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Parameters not present",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test('Practices - parameters not present', function (){\r",
+											"    pm.response.to.have.status(200);\r",
+											"})\r",
+											"\r",
+											"pm.test(\"Body is empty\", function () {\r",
+											"    pm.response.to.have.body(\"[]\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/practices/?id=adsvasd&urgent=trueasd",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"practices",
+										""
+									],
+									"query": [
+										{
+											"key": "id_like",
+											"value": "fg",
+											"disabled": true
+										},
+										{
+											"key": "created_start",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "created_end",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "arrived_is_not_null",
+											"value": "true",
+											"disabled": true
+										},
+										{
+											"key": "id",
+											"value": "adsvasd"
+										},
+										{
+											"key": "urgent",
+											"value": "trueasd"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('Practices - parameters present - ID', function (){\r",
+									"    pm.response.to.have.status(200);\r",
+									"})\r",
+									"\r",
+									"pm.test(\"id equal to p1\", function () {\r",
+									"    var jsonData = pm.response.json(); \r",
+									"    pm.expect(jsonData[0].id).to.eql(\"p1\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/practices/?id=p1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"practices",
+								""
+							],
+							"query": [
+								{
+									"key": "id_like",
+									"value": "fg",
+									"disabled": true
+								},
+								{
+									"key": "created_start",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "created_end",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "arrived_is_not_null",
+									"value": "true",
+									"disabled": true
+								},
+								{
+									"key": "id",
+									"value": "p1"
+								},
+								{
+									"key": "urgent",
+									"value": "true",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlYyUFdKTEg3Z2dGVTJwaXRnWWNreUJEY3ZQelJhS1B3UXZWQS1PWmR3TTAifQ.eyJleHAiOjI2MTM1NTE2MDgsImlhdCI6MTYxMzU1MDcwOCwiYXV0aF90aW1lIjoxNjEzNTQ5ODA3LCJqdGkiOiJjNTI2OWIyYy05ZGZkLTRiNjctOGQ1YS00MWM5MTE4ZmMxMWYiLCJpc3MiOiJodHRwOi8vMTYxLjI3LjE0Ni4xNTo4MTgwL2F1dGgvcmVhbG1zL0dlY29fUmVhbG0iLCJzdWIiOiJmOjA5MzM5MDQ2LTA3M2MtNGViMi05MDdkLTdkZjdlZGJiMWQ2MDpmOjA5MzM5MDQ2LTA3M2MtNGViMi05MDdkLTdkZjdlZGJiMWQ2MDpmOjA5MzM5MDQ2LTA3M2MtNGViMi05MDdkLTdkZjdlZGJiMWQ2MDpmOjA5MzM5MDQ2LTA3M2MtNGViMi05MDdkLTdkZjdlZGJiMWQ2MDp1MDB0ZXN0IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiR2Vjb0xvY2FsaG9zdCIsIm5vbmNlIjoiMC41NTQzMzcxODgzMzE3MjQxIiwic2Vzc2lvbl9zdGF0ZSI6ImVjNzNiODQyLTMwMjAtNGYxNC1hM2UwLTA4MDU4MzM1MGUxNCIsImFjciI6IjAiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cDovL2xvY2FsaG9zdDo0MjAwIl0sInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJuYW1lIjoiRWxpc2FiZXR0YSBBbW1pbmlzdHJhdHJpY2UiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJmOjA5MzM5MDQ2LTA3M2MtNGViMi05MDdkLTdkZjdlZGJiMWQ2MDpmOjA5MzM5MDQ2LTA3M2MtNGViMi05MDdkLTdkZjdlZGJiMWQ2MDpmOjA5MzM5MDQ2LTA3M2MtNGViMi05MDdkLTdkZjdlZGJiMWQ2MDp1MDB0ZXN0IiwiZ2l2ZW5fbmFtZSI6IkVsaXNhYmV0dGEiLCJmYW1pbHlfbmFtZSI6IkFtbWluaXN0cmF0cmljZSIsImF1dGhvcml6YXRpb25zIjpbImFkbWluIl19.G4o00Hk9T011XR4r6mUSnXTd9oCGodobYVHcYxVkQDk",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "x-authorization",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

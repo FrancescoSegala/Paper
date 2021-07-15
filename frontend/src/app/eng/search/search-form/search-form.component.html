@@ -1,0 +1,61 @@
+<div class="margin" *ngFor="let e of config">
+  <div *ngIf="e.text">
+    <mat-form-field style="width: 100%">
+      <mat-label>{{e.label | t}}</mat-label>
+      <input matInput [(ngModel)]="params[e.field]" [type]="e.type" placeholder="{{e.text | t}}"
+        (keyup.enter)="search()" (ngModelChange)="validate($event, e.field)">
+      </mat-form-field>
+      <div *ngIf="regex_validation[e.field]">* not valid</div>
+  </div>
+  <div *ngIf="e.checkbox">
+    <mat-checkbox *ngFor="let c of e.checkbox" (change)="set_value( $event ,c.value, e.field )" class="format checkbox">
+      {{c.label | t}}</mat-checkbox>
+  </div>
+  <div *ngIf="e.autocomplete">
+     <app-autocomplete [config]="e.autocomplete.config" [(input)]="params[e.autocomplete.field]"></app-autocomplete>
+  </div>
+  <div *ngIf="e.single_checkbox">
+    <mat-checkbox [(ngModel)]="params[e.field]" class="format checkbox">{{e.single_checkbox.label | t}}</mat-checkbox>
+  </div>
+  <div *ngIf="e.select">
+    <mat-form-field appearance="fill" style="width: 100%;">
+      <mat-label>{{e.label | t}}</mat-label>
+      <mat-select multiple [(ngModel)]="params[e.field]">
+        <mat-option *ngFor="let s of e.select" [value]="s.value"> <img *ngIf="s.image" alt="logo"
+            style="height: 2em;margin: auto;position: absolute;top:10%;transform: translateY (-50%);" [src]="s.image">
+          &nbsp;
+          <span style="margin-left:3em">
+            {{s.label | t}}
+          </span>
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div *ngIf="e.date">
+    <mat-form-field color="primary" appearance="fill" style="width: 100%;">
+      <mat-label>{{e.label | t}}</mat-label>
+      <mat-date-range-input [rangePicker]="picker">
+        <input (click)="picker.open()" [(ngModel)]="params[e.date.start]" matStartDate
+          placeholder="{{'start_date' | t}}">
+        <input (click)="picker.open()" [(ngModel)]="params[e.date.end]" (ngModelChange)="format_date(e.date.end)"
+          matEndDate placeholder="{{'end_date' | t}}">
+      </mat-date-range-input>
+      <div matSuffix style="display: flex;">
+        <mat-datepicker-toggle [for]="picker"></mat-datepicker-toggle>
+        <mat-icon class="pointer" style="margin: auto;margin-left: 1em;" (click)="reset_date(e.date)">clear</mat-icon>
+      </div>
+
+      <mat-date-range-picker touchUi #picker></mat-date-range-picker>
+    </mat-form-field>
+  </div>
+</div>
+
+<div class="double-line-container margin" style="margin-bottom: 1em;">
+  <button [disabled]="enable_search" mat-flat-button *ngIf="config.length>0" color="primary"
+    class="{{do_export ? 'double-line-button-left' : 'single-line-button'}} darker-primary-bg"
+    (click)="search()">{{"search" | t}}&nbsp;&nbsp; <mat-icon>search</mat-icon></button>
+  <button mat-flat-button color="accent" *ngIf="do_export"
+    class="{{config.length>0 ? 'double-line-button-right' : 'single-line-button'}}"
+    (click)="export()">
+    {{"export" | t}}&nbsp;&nbsp; <mat-icon>save_alt</mat-icon></button>
+</div>

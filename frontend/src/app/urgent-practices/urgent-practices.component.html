@@ -1,0 +1,13 @@
+<mat-card>
+    <app-search
+        [config]="config"
+        [params]="params"
+        [load]="load.bind(this)"
+        [show_add]="is_authorized('sender', 'admin')"
+        [add_item]="openBottomSheet.bind(this)"
+        export_name="urgent-practices"
+        [navigate]="navigate.bind(this)">
+    </app-search>
+</mat-card>
+
+

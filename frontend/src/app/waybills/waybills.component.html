@@ -1,0 +1,21 @@
+
+<mat-card *ngIf="is_authorized('receiver', 'admin')" style="margin-bottom: 1.5em;">
+  <app-add-input
+      [create]="create.bind(this)"
+      [placeholder]="'waybill'"
+      title="add_waybill"
+      style="width: 100%;"
+      >
+  </app-add-input>
+</mat-card>
+
+<mat-card style="margin-top: 2em;">
+  <app-search
+      [config]="config"
+      [params]="params"
+      [load]="load.bind(this)"
+      export_name="waybills">
+  </app-search>
+</mat-card>
+
+

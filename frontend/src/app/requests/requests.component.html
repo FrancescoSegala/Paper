@@ -1,0 +1,12 @@
+<mat-card>
+    <app-search
+        [config]="config"
+        [params]="params"
+        [load]="load.bind(this)"
+        [navigate]="navigate.bind(this)"
+        export_name="requests">
+    </app-search>
+</mat-card>
+
+<!-- [add_item]="openBottomSheet.bind(this)"
+[show_add]="is_authorized('admin')" -->

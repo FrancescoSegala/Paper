@@ -1,0 +1,16 @@
+<app-search-form
+  [config]="config.search_params"
+  [params]="params"
+  [do_export]="do_export"
+  [service_name]="service_name"
+></app-search-form>
+<app-search-list
+  [load]="load"
+  [config]="config.table_fields"
+  [navigate]="navigate"
+  [color_class]="config.color_class"
+  [service_name]="service_name"
+></app-search-list>
+<button *ngIf="show_add" mat-fab style="position: fixed; right: 1em; bottom: 1em;" color="accent" (click)="add_item()">
+  <mat-icon>add</mat-icon>
+</button>

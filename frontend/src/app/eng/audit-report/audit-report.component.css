@@ -1,0 +1,42 @@
+.card-box {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: stretch;
+  margin: auto;
+  text-align: center;
+}
+
+.card {
+  width: 30%;
+  margin: auto;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+
+.card-title{
+  display: inline-block;
+  width: 100%;
+}
+
+
+
+.card-title .title{
+  float: left;
+}
+
+
+.card-title .menu-btn {
+  float: right;
+}
+
+
+@media screen and (max-width: 1160px){
+  .dashboard-card {
+    width: 100%;
+    margin: auto;
+    margin-top: 2.5em;
+    margin-bottom: 1.5em;
+  }
+}

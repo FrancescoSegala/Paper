@@ -1,0 +1,25 @@
+
+<mat-card>
+  <mat-card-title>{{"practice_documents" | t}}</mat-card-title>
+  <app-search
+    [config]="config"
+    [params]="params"
+    [load]="load.bind(this)"
+    service_name="PRACTICES"
+    >
+  </app-search>
+</mat-card>
+
+<mat-card style="margin-top: 2em;">
+  <mat-card-title>{{"practice_requests" | t}}</mat-card-title>
+  <app-search
+    [config]="config_requests"
+    [params]="params_requests"
+    [load]="load_requests.bind(this)"
+    [add_item]="openBottomSheet.bind(this)"
+    [show_add]="is_authorized('admin')"
+    service_name="REQUESTS"
+    >
+  </app-search>
+</mat-card>
+
